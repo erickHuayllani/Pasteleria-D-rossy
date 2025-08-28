@@ -1,0 +1,246 @@
+/* === ESTILOS GENERALES === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #fdfaf6; /* Fondo beige claro */
+  color: #3b2d1f; /* Marrón oscuro elegante */
+}
+
+/* === HERO === */
+.hero {
+  background-image: url('img/FondoR.png');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 45, 31, 0.55); /* filtro marrón translúcido */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 52px;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+  color: #fdfaf6;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.hero-content .btn {
+  background-color: #d2691e; /* Marrón cálido/dorado */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+  background-color: #b85815;
+}
+
+/* === NAVBAR === */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff8f0;
+  padding: 12px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-bar h1 {
+  font-size: 26px;
+  font-family: 'Georgia', serif;
+  color: #8b4513;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  color: #3b2d1f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #d2691e;
+}
+
+/* === PRODUCTOS (Cards) === */
+.grid-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background: #d2691e;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #a0522d;
+}
+
+/* === PROMOCIONES === */
+.promo {
+  background-color: #f8e4d3;
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Georgia', serif;
+}
+
+.promo h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #8b4513;
+}
+
+/* === NOSOTROS === */
+.nosotros {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.nosotros h2 {
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #8b4513;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #3b2d1f;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* === CATEGORÍAS (Explore More) === */
+.explore {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fffaf3;
+}
+
+.explore h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  font-family: 'Georgia', serif;
+  color: #8b4513;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: #3b2d1f;
+  transition: 0.3s;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  border-color: #d2691e;
+  color: #d2691e;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.gallery .item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s;
+}
+
+.gallery .item:hover {
+  transform: scale(1.05);
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
