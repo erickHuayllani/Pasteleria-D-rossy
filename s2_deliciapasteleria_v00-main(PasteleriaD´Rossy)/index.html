@@ -5,8 +5,9 @@
   <title>Pastelería D'Rossy</title>
   <link rel="stylesheet" href="estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS: Animate On Scroll Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    /* --- ESTILOS GLOBALES --- */
     * {
       margin: 0;
       padding: 0;
@@ -15,7 +16,7 @@
     }
 
     body {
-      background: #fffaf3;
+      background: #f5c179;
       color: #333;
       line-height: 1.6;
     }
@@ -45,13 +46,12 @@
       transform: scale(1.05);
     }
 
-    /* --- NAV --- */
     .nav-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 50px;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgb(240, 240, 240);
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
@@ -78,11 +78,10 @@
       color: orange;
     }
 
-    /* --- HERO --- */
     .hero {
-      background: url("img/panaderia-bg.jpg") center/cover no-repeat;
+      background: url("img/FondoR.png") center/cover no-repeat;
       position: relative;
-      color: white;
+      color: rgb(235, 228, 228);
       height: 80vh;
       display: flex;
       align-items: center;
@@ -107,7 +106,6 @@
       margin-bottom: 15px;
     }
 
-    /* --- PRODUCTOS --- */
     .productos {
       padding: 60px 50px;
       text-align: center;
@@ -125,10 +123,8 @@
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease, opacity 0.6s ease;
-      opacity: 0;
-      transform: scale(0.9);
-      animation: fadeIn 0.8s forwards;
+      transform: scale(0.95);
+      transition: transform 0.3s ease, opacity 0.5s ease;
     }
 
     .card:hover {
@@ -166,16 +162,8 @@
       background: #ff7b00;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* --- PROMO --- */
     .promo {
-      background: orange;
+      background: rgba(253, 167, 8, 0.856);
       color: white;
       text-align: center;
       padding: 50px 20px;
@@ -186,7 +174,6 @@
       margin-bottom: 10px;
     }
 
-    /* --- GALERÍA --- */
     .explore {
       padding: 60px 50px;
       text-align: center;
@@ -216,7 +203,7 @@
 
     .tabs button.active {
       color: orange;
-      border-bottom: 2px solid orange;
+      border-bottom: 2px solid sorange;
       font-weight: bold;
     }
 
@@ -226,14 +213,12 @@
       gap: 20px;
     }
 
-    /* --- NOSOTROS --- */
     .nosotros {
       padding: 60px 50px;
       background: #f9f9f9;
       text-align: center;
     }
 
-    /* --- PEDIDOS --- */
     #pedidos {
       padding: 60px 50px;
       text-align: center;
@@ -254,7 +239,7 @@
     }
 
     input[type="submit"] {
-      background: orange;
+      background: rgb(255, 166, 0);
       color: white;
       font-weight: bold;
       cursor: pointer;
@@ -265,7 +250,6 @@
       background: #ff7b00;
     }
 
-    /* --- FOOTER --- */
     .footer {
       background: #222;
       color: #fff;
@@ -304,47 +288,47 @@
         <li><a href="#pedidos">Pedidos</a></li>
       </ul>
     </nav>
-    <div class="hero-content">
+    <div class="hero-content" data-aos="zoom-in">
       <h2>La Panadería y Pastelería D'Rossy</h2>
       <p>Elaborando con pasión, tradición y calidad desde hace 10 años.</p>
       <a class="btn" href="#productos">Ver productos</a>
     </div>
   </header>
 
-  <section id="productos" class="productos">
+  <section id="productos" class="productos" data-aos="fade-up">
     <h2>Pasteles Personalizados</h2>
     <div class="grid-productos">
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
         <img src="img/Pokemom.png" alt="Pan">
         <h3>Torta de pókebola</h3>
         <p>S/67.00</p>
         <button>Agregar</button>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <img src="img/totoro.png" alt="Bizcocho">
         <h3>Torta de mi vecino totoro</h3>
         <p>S/59.00</p>
         <button>Agregar</button>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
         <img src="img/pastelPollo.png" alt="Pizza">
         <h3>Torta del pollito pío</h3>
         <p>S/50.00</p>
         <button>Agregar</button>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="400">
         <img src="img/PasttelPVZ.png" alt="Pionono">
         <h3>Torta de Plantas vs Zombies</h3>
         <p>S/50.00</p>
         <button>Agregar</button>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="500">
         <img src="img/bob esponja.png" alt="Postres">
         <h3>Torta de Bob Esponja y sus amigos</h3>
         <p>S/150.00</p>
         <button>Agregar</button>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="600">
         <img src="img/corona.png" alt="Tortas">
         <h3>Torta Helada (Especialmente para papá)</h3>
         <p>S/59.00</p>
@@ -353,31 +337,28 @@
     </div>
   </section>
 
-  <section class="promo">
+  <section class="promo" data-aos="zoom-in">
     <h2>20% de descuento en tu primer pedido</h2>
     <p>¡Aprovecha nuestra promoción especial!</p>
     <a class="btn" href="#pedidos">Pedir ahora</a>
   </section>
 
-  <!-- SECCIÓN DE GALERÍA DINÁMICA -->
-  <section class="explore">
+  <section class="explore" data-aos="fade-up">
     <h2>Explora Más</h2>
     <div class="tabs">
       <button class="active" data-category="Panes">Panes</button>
       <button data-category="Tortas">Tortas</button>
       <button data-category="Postres">Postres</button>
     </div>
-  
     <div id="gallery" class="gallery"></div>
   </section>
-  <!-- FIN DE GALERÍA -->
 
-  <section id="nosotros" class="nosotros">
+  <section id="nosotros" class="nosotros" data-aos="fade-up">
     <h2>Sobre Nosotros</h2>
     <p>Somos una panadería familiar que combina recetas tradicionales con un toque innovador para deleitar a nuestros clientes.</p>
   </section>
 
-  <section id="pedidos">
+  <section id="pedidos" data-aos="fade-up">
     <h2>Haz tu Pedido</h2>
     <form>
       <label for="nombre">Nombre:</label>
@@ -393,7 +374,7 @@
     </form>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" data-aos="fade-up">
     <div class="footer-content">
       <div>
         <h3>Contacto</h3>
@@ -412,7 +393,14 @@
     <p class="copy">&copy; 2025 Pastelería D'Rossy. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
     const images = {
       "Panes": [
         "img/Tantawawaas.jpg",
@@ -436,15 +424,18 @@
 
     function loadGallery(category) {
       gallery.innerHTML = "";
-      images[category].forEach(src => {
+      images[category].forEach((src, index) => {
         const card = document.createElement("div");
         card.classList.add("card");
+        card.setAttribute("data-aos", "fade-up");
+        card.setAttribute("data-aos-delay", `${index * 100}`);
         const img = document.createElement("img");
         img.src = src;
         img.alt = category;
         card.appendChild(img);
         gallery.appendChild(card);
       });
+      AOS.refresh();
     }
 
     buttons.forEach(btn => {
@@ -455,7 +446,6 @@
       });
     });
 
-    // Mostrar "Panes" por defecto
     loadGallery("Panes");
   </script>
 
